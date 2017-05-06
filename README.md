@@ -1,4 +1,4 @@
-# Algorithms & Data Structures in Python
+# Data Structures & Algorithms in Python
 For educational purposes
 - 1) Data structures: [notebook](data_structures.ipynb)
     + Node
