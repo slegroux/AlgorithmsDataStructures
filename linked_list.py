@@ -22,6 +22,9 @@ class LinkedList(object):
 		return str(res)
 
 	def append(self, value):
+		# T: O(1)
+		# S: O(1)
+
 		new = Node(value)
 		if self.length == 0:
 			self.head = self.tail = new
@@ -31,6 +34,9 @@ class LinkedList(object):
 		self.length += 1
 
 	def insert(self, value, index):
+		# T: O(N)
+		# S: O(1)
+
 		if index < 0 or index >= self.length:
 			return
 		new = Node(value)
@@ -55,6 +61,9 @@ class LinkedList(object):
 
 
 	def remove(self, index):
+		# T: O(N)
+		# S: O(1)
+
 		if index < 0 or index >= self.length:
 			return
 
@@ -68,7 +77,7 @@ class LinkedList(object):
 			for i in range(index - 1):
 				current = current.next
 			current.next = current.next.next
-			if index == self.length-1:
+			if index == self.length - 1:
 				self.tail = current
 		self.length -= 1
 
@@ -92,4 +101,3 @@ ll.remove(0)
 print ll
 ll.remove(2)
 print ll
-
