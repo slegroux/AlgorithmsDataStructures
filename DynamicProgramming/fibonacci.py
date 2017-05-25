@@ -9,6 +9,7 @@ def memoize(f):
 
 
 # function decorator
+# memoization converts O(2^n) recursive calls into O(n) hash indexing
 @memoize
 def fib(n):
 	if n <= 1:
