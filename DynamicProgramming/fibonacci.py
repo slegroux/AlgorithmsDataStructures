@@ -31,5 +31,15 @@ def fib_mem(n):
 	helper(n)
 	return memo[n]
 
+
+# tabulation
+def fib_tab(n):
+	tab = {}
+	tab[0] = tab[1] = 1
+	for i in range(2, n+1):
+		tab[i] = tab[i-1] + tab[i-2]
+	return tab[n]
+
 print fib(40)
 print fib_mem(40)
+print fib_tab(40)
