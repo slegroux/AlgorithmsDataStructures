@@ -17,4 +17,19 @@ def fib(n):
 	return fib(n - 1) + fib(n - 2)
 
 
+
+def fib_mem(n):
+	global memo
+	memo = {}
+	def helper(n):
+		global memo
+		if n<=1:
+			return 1
+		if n not in memo:
+			memo[n] = helper(n-1) + helper(n-2)
+		return memo[n]
+	helper(n)
+	return memo[n]
+
 print fib(40)
+print fib_mem(40)
