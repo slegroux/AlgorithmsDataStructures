@@ -19,10 +19,12 @@ class LinkedList(object):
 			current.next = n
 
 	def print_list(self):
+		res = []
 		current = self.head
 		while(current != None):
-			print current.value
+			res.append(current.value)
 			current = current.next
+		print res
 
 	def reverse(self):
 		prev = None
@@ -44,5 +46,6 @@ ll = LinkedList()
 ll.append(1)
 ll.append(2)
 ll.append(3)
+ll.print_list()
 ll.reverse()
 ll.print_list()
