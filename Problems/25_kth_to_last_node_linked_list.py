@@ -46,8 +46,11 @@ class LinkedList():
 		pt_l = self.head
 		pt_r = self.head
 		counter = 0
-		while counter < self.length - k:
+		while counter < k:
 			counter += 1
+			pt_r = pt_r.next
+
+		while pt_r is not None:
 			pt_r = pt_r.next
 			pt_l = pt_l.next
 		return pt_l.value
