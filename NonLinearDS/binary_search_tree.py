@@ -69,7 +69,7 @@ class BinarySearchTree(object):
 
 			if current.left:
 				traverse_in_(current.left)
-			print current.value
+			print(current.value)
 			if current.right:
 				traverse_in_(current.right)
 
@@ -82,7 +82,7 @@ class BinarySearchTree(object):
 		def traverse_pre_(current):
 			if current == None:
 				return
-			print current.value
+			print(current.value)
 			if current.left:
 				traverse_pre_(current.left)
 			if current.right:
@@ -100,7 +100,7 @@ class BinarySearchTree(object):
 				traverse_post_(current.left)
 			if current.right:
 				traverse_post_(current.right)
-			print current.value
+			print(current.value)
 
 		traverse_post_(current)
 
@@ -109,7 +109,7 @@ class BinarySearchTree(object):
 		q.append(self.root)
 		while q:
 			current = q.popleft()
-			print current.value
+			print(current.value)
 			if current.left:
 				q.append(current.left)
 			if current.right:
