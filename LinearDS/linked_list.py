@@ -143,6 +143,14 @@ class LinkedList():
 			current = current.next
 		return(l)
 
+	def __str__(self):
+		items = []
+		current = self.head
+		while(current != None ):
+			items.append(current.value)
+			current = current.next
+		return(str(items))
+
 
 print('append')
 ll = LinkedList()
@@ -151,6 +159,7 @@ ll.append(2)
 ll.append(4)
 ll.traverse()
 print(ll.to_list())
+print(ll)
 
 print("prepend")
 ll.prepend(1)
