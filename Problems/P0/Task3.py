@@ -66,20 +66,25 @@ l.sort() # T: O(nlogn)
 
 # overall complexity => T: O(nlogn) S: O(n)
 
-
-# part B
 print("The numbers called by people in Bangalore have codes:")
 for i in l:
   print(i)
 
-count = 0
+
+# Part B
+count_outgoing = 0
+count_ingoing = 0
+for line in calls:
+  print(line[0][:5], line[1][:5])
+  if line[0][:5] == '(080)':
+    count_outgoing += 1
+    if line[1][:5] == '(080)':
+      count_ingoing += 1
+
+
 # overal complexity:
-# T: O(n): got through all list
-# S: O(1) just update 1 var
-for code in from_bangalore:
-  if code == '080':
-    count += 1
+# T: O(n): go through at most list of N calls. each time check pattern for area code O(1). n*O(1) = O(n)
+# S: O(1) just update 2 var
 
-p = count / len(from_bangalore)
-
+p = round(count_ingoing / float(count_outgoing), 2)
 print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(p))
