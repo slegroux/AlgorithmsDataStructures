@@ -38,8 +38,13 @@ for line in texts:
     outgoing_text.add(line[0])
     ingoing_text.add(line[1])
 
+# T: union O(n) intersection: O(n**2)
+# S: O(n)
 telemarket = list(outgoing_call - (outgoing_call & ingoing_call & outgoing_text & ingoing_text))
+# T: O(nlog(n))
 telemarket.sort()
 
 print("These numbers could be telemarketers: ")
 [ print(i) for i in telemarket ]
+
+# => overall complexity: T: O(n**2) S: O(n)
