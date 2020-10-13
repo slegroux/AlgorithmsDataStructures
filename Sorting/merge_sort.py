@@ -1,4 +1,5 @@
 def merge(arr1, arr2):
+	# interleaves 2 sorted arrays
 	n1 = len(arr1)
 	n2 = len(arr2)
 	pt1 = 0
@@ -28,7 +29,7 @@ def merge(arr1, arr2):
 def merge_sort(arr):
 	if len(arr) <= 1:
 		return arr
-	pivot = len(arr) / 2
+	pivot = len(arr) // 2
 	left = arr[:pivot]
 	right = arr[pivot:]
 	sorted_left = merge_sort(left)
@@ -37,5 +38,5 @@ def merge_sort(arr):
 	return merge(sorted_left, sorted_right)
 
 
-print merge([1,4,5], [2,6,7])
-print merge_sort([10,2,4,6,11,0])
+print(merge([1,4,5], [2,6,7]))
+print(merge_sort([10,2,4,6,11,0]))
