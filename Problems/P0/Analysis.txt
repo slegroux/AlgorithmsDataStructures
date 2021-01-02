@@ -1,7 +1,6 @@
 T = Time complexity, S = Space complexity
 
-Task0:
-
+** Task0:
 - open, csv.reader
     T: O(1), S: O(1) because it just prepares files for reading
 
@@ -12,3 +11,7 @@ Task0:
 - texts[0][0]
     T: O(1), S: O(1) python list != linkedlist so accessing element is constant
     
+** Task 1:
+- for line in texts:
+    T: O(N) (have to read through all list of size N)
+    S: O(N) (have to increase size of phone_list N times)
