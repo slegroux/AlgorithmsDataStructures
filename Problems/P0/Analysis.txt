@@ -1,0 +1,14 @@
+T = Time complexity, S = Space complexity
+
+Task0:
+
+- open, csv.reader
+    T: O(1), S: O(1) because it just prepares files for reading
+
+- list(reader):
+    T: O(1) prepares lists
+    S: O(N) has to load N records in memory
+    
+- texts[0][0]
+    T: O(1), S: O(1) python list != linkedlist so accessing element is constant
+    
