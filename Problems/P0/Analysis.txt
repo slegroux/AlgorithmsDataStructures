@@ -10,8 +10,36 @@ T = Time complexity, S = Space complexity
     
 - texts[0][0]
     T: O(1), S: O(1) python list != linkedlist so accessing element is constant
+
+=> T: O(1), S: O(N)
     
 ** Task 1:
 - for line in texts:
     T: O(N) (have to read through all list of size N)
     S: O(N) (have to increase size of phone_list N times)
+
+=> T: O(N), S: O(N)
+
+** Task 2:
+- for line in calls:
+    T: O(N) (have to read through all list of size N)
+    S: O(N) (have to increase size of phone_list N times)
+
+- for v, k in durations.items():
+    T: O(n) go through all duratoins elements and create inverse_dict elements
+    S: O(n)
+
+=> T: O(N), S: O(N)
+
+** Task 3:
+- for line in calls: 
+    T: O(N) loop through n items
+    S: O(N) at worst finds a new phone at each iteration
+- l.sort()
+    T: O(Nlog(N))
+    S: O(1) if in place
+
+=> overall: T: O(Nlog(N)) S: O(N)
+
+** Task 4:
+- 

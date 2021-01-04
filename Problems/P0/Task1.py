@@ -20,7 +20,6 @@ Print a message:
 "There are <count> different telephone numbers in the records."
 """
 
-
 phone_list = []
 
 for line in texts:

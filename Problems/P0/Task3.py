@@ -52,13 +52,18 @@ from_bangalore = []
 for line in calls:
   if line[0][:5] == '(080)':
     code = []
-    if line[1][0] == '(':
+    if line[1][:2] == '(0':
       i = 1
       while line[1][i] != ')':
         # S: O(1) need at most length of phone number-2 spaces for are code (if whole phone number was just the area code)
         code.append(line[1][i])
         i += 1
       from_bangalore.append(''.join(code))
+    elif line[1][5] == ' ':
+      if int(line[1][0]) == (7 or 8 or 9):
+        from_bangalore.append(line[1][:4])
+    elif line[1][:3] == '140':
+      from_bangalore.append('140')
 
 # T: O(n) (go through wole list to get set)
 l = list(set(from_bangalore))
@@ -75,16 +80,15 @@ for i in l:
 count_outgoing = 0
 count_ingoing = 0
 for line in calls:
-  print(line[0][:5], line[1][:5])
   if line[0][:5] == '(080)':
     count_outgoing += 1
     if line[1][:5] == '(080)':
       count_ingoing += 1
 
 
-# overal complexity:
-# T: O(n): go through at most list of N calls. each time check pattern for area code O(1). n*O(1) = O(n)
-# S: O(1) just update 2 var
+# # overal complexity:
+# # T: O(n): go through at most list of N calls. each time check pattern for area code O(1). n*O(1) = O(n)
+# # S: O(1) just update 2 var
 
 p = round(count_ingoing / float(count_outgoing), 2)
 print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(p))

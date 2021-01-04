@@ -23,8 +23,6 @@ September 2016.".
 durations = {}
 
 for line in calls:
-    # T: O(n) go through list of size n
-    # S: O(n) at most has to add n elements to dictionary
     if line[0] not in durations:
         durations[line[0]] = int(line[-1])
     else:
@@ -37,12 +35,10 @@ for line in calls:
 
 inverse_dict = {}
 for v, k in durations.items():
-    # T: O(n) go through all duratoins elements and create inverse_dict elements S: O(n)
     inverse_dict[k] = v
 
 m = max(inverse_dict) # have to check all elements to see if larger than current max T: O(n) just create 1 new variable S: O(1)
 phone = inverse_dict[m] # hash table to get value at key m: T: O(1)
 
-# => overall complexity O(n) both S & T
 
 print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(phone, m))
