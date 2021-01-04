@@ -34,7 +34,7 @@ T = Time complexity, S = Space complexity
 ** Task 3:
 - for line in calls: 
     T: O(N) loop through n items
-    S: O(N) at worst finds a new phone at each iteration
+    S: O(N) at worst finds a new phone number at each iteration and append to list
 - l.sort()
     T: O(Nlog(N))
     S: O(1) if in place
@@ -42,4 +42,5 @@ T = Time complexity, S = Space complexity
 => overall: T: O(Nlog(N)) S: O(N)
 
 ** Task 4:
-- 
+- T: O(Nlog(N)) because we use sorting function
+  S: O(N) because we add at most N elements to list
