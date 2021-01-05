@@ -16,7 +16,10 @@ For educational purposes
     + Quick sort
     + Merge sort
 
-
-
+Some refs:
+- https://openbookproject.net/thinkcs/python/english3e/
+- https://bradfieldcs.com/algos/
+- https://realpython.com/python-heapq-module/
+- https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
 
 Sylvain Le Groux <slegroux@ccrma.stanford.edu>

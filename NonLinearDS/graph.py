@@ -74,7 +74,7 @@ class Graph:
 					if neighbor not in visited:
 						visited.append(neighbor)
 						q.append(neighbor)
-			print current, q
+			print(current, q)
 		return visited
 
 
@@ -86,7 +86,7 @@ g.add_vertex('D')
 g.add_edge('A','B')
 g.add_edge('A','C')
 g.add_edge('B','D')
-print g.find_neighbors('A')
-print g.find_neighbors('B')
-print g.find_neighbors('C')
-print g.bfs('A')
+print(g.find_neighbors('A'))
+print(g.find_neighbors('B'))
+print(g.find_neighbors('C'))
+print(g.bfs('A'))

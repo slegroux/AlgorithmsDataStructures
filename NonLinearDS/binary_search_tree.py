@@ -77,6 +77,7 @@ class BinarySearchTree(object):
 
 	def traverse_pre(self):
 		# Root-Left-Right
+		# check out Node immediately without having seen its children
 		current = self.root
 
 		def traverse_pre_(current):
@@ -90,6 +91,7 @@ class BinarySearchTree(object):
 		traverse_pre_(current)
 
 	def traverse_post(self):
+		# don't check node until all children have been seen
 		# Left-Right-Root
 		current = self.root
 
