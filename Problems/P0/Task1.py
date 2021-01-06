@@ -20,15 +20,15 @@ Print a message:
 "There are <count> different telephone numbers in the records."
 """
 
-phone_list = []
+phone_list = set()
 
 for line in texts:
 
-    phone_list.append(line[0])
-    phone_list.append(line[1])
+    phone_list.add(line[0])
+    phone_list.add(line[1])
 
 for line in calls:
-    phone_list.append(line[0])
-    phone_list.append(line[1])
+    phone_list.add(line[0])
+    phone_list.add(line[1])
 
-print("There are {} different telephone numbers in the records.".format(len(set(phone_list))))
+print("There are {} different telephone numbers in the records.".format(len(phone_list)))
