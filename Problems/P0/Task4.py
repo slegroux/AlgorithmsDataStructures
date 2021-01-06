@@ -25,26 +25,20 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
-outgoing_call = set()
-ingoing_call = set()
-outgoing_text = set()
-ingoing_text = set()
+callers = set()
+other = set()
 
 for line in calls:
-    outgoing_call.add(line[0])
-    ingoing_call.add(line[1])
+    callers.add(line[0])
+    other.add(line[1])
 
 for line in texts:
-    outgoing_text.add(line[0])
-    ingoing_text.add(line[1])
+    other.add(line[0])
+    other.add(line[1])
 
-# T: union O(n)
-# S: O(n)
-telemarket = list(outgoing_call - ingoing_call - outgoing_text - ingoing_text)
-# T: O(nlog(n))
-telemarket.sort()
+telemarket = callers - other
 
 print("These numbers could be telemarketers: ")
-[ print(i) for i in telemarket ]
+[ print(i) for i in sorted(telemarket) ] # sort: T: O(nlog(n))
 
 # => overall complexity: T: O(nlog(n)) S: O(n)
