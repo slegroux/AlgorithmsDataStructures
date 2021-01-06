@@ -60,7 +60,7 @@ for line in calls:
         i += 1
       from_bangalore.append(''.join(code))
     elif line[1][5] == ' ':
-      if int(line[1][0]) == (7 or 8 or 9):
+      if int(line[1][0]) in (7, 8, 9):
         from_bangalore.append(line[1][:4])
     elif line[1][:3] == '140':
       from_bangalore.append('140')
@@ -90,5 +90,5 @@ for line in calls:
 # # T: O(n): go through at most list of N calls. each time check pattern for area code O(1). n*O(1) = O(n)
 # # S: O(1) just update 2 var
 
-p = round(count_ingoing / float(count_outgoing), 2)
+p = round(100*count_ingoing / float(count_outgoing), 2)
 print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(p))
