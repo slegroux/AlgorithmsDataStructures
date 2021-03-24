@@ -120,16 +120,23 @@ class BinarySearchTree(object):
 
 
 bst = BinarySearchTree()
+#               3
+#              / \
+#             1   4
+#            / \  / \
+#                    7
+#                     \
+#                      11
 for value in [3,1,4,7,11]:
 	bst.insert(value)
 
-print "in order:"
+print("in order:")
 bst.traverse_in()
-print "pre order: "
+print("pre order: ")
 bst.traverse_pre()
-print "post order: "
+print("post order: ")
 bst.traverse_post()
-print "bfs: "
+print("bfs: ")
 bst.traverse_bfs()
-print bst.search(4)
-print bst.search(99)
+print(bst.search(4))
+print(bst.search(99))
